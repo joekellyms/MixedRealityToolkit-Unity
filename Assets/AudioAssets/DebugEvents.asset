@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9d501b83c3a5d45b5deffcc726951f, type: 3}
+  m_Name: DebugEvents
+  m_EditorClassIdentifier: 
+  audioEvents:
+  - {fileID: 114276918554816154}
+  parameters: []
+--- !u!114 &114082222648960354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45cf000cc6667c4e9ad0ade0cfc82a7, type: 3}
+  m_Name: Debug MessageOutput
+  m_EditorClassIdentifier: 
+  Window:
+    serializedVersion: 2
+    x: 9913
+    y: 10049
+    width: 20
+    height: 20
+  parentNode: {fileID: 114468650094220526}
+--- !u!114 &114106924366976466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3210b711af0f4ab76fc3bff926f11, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 10000
+    y: 10000
+    width: 300
+    height: 185
+  input: {fileID: 114176589945473026}
+  output: {fileID: 0}
+  mixerGroup: {fileID: 0}
+  MinVolume: 1
+  MaxVolume: 1
+  MinPitch: 1
+  MaxPitch: 1
+  loop: 0
+  spatialBlend: 0
+  HRTF: 0
+  MaxDistance: 10
+  attenuationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  dopplerLevel: 1
+--- !u!114 &114168602506223492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45cf000cc6667c4e9ad0ade0cfc82a7, type: 3}
+  m_Name: Audio FileOutput
+  m_EditorClassIdentifier: 
+  Window:
+    serializedVersion: 2
+    x: 9602
+    y: 10029
+    width: 20
+    height: 20
+  parentNode: {fileID: 114501859966755512}
+--- !u!114 &114176589945473026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a81b464ba9745e44be8820ad1c8cfd6, type: 3}
+  m_Name: OutputInput
+  m_EditorClassIdentifier: 
+  Window:
+    serializedVersion: 2
+    x: 9980
+    y: 10092.5
+    width: 20
+    height: 20
+  parentNode: {fileID: 114106924366976466}
+  connectedNodes:
+  - {fileID: 114082222648960354}
+  forceSingleConnection: 0
+--- !u!114 &114276918554816154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d6a001556e463478b5c476e3e6195c, type: 3}
+  m_Name: New Audio Event
+  m_EditorClassIdentifier: 
+  instanceLimit: 0
+  fadeIn: 0
+  fadeOut: 0
+  group: 0
+  nodes:
+  - {fileID: 114106924366976466}
+  - {fileID: 114468650094220526}
+  - {fileID: 114501859966755512}
+  output: {fileID: 114106924366976466}
+  parameters: []
+--- !u!114 &114468650094220526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264c403d8bc4e0f439a4a5526f6d9e9a, type: 3}
+  m_Name: Debug Message
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 9663
+    y: 10024
+    width: 250
+    height: 50
+  input: {fileID: 114869063994512148}
+  output: {fileID: 114082222648960354}
+  message: 
+--- !u!114 &114501859966755512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563994e88e1b8414890b10d6bac7a456, type: 3}
+  m_Name: sound_TapDown
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 9302
+    y: 9979
+    width: 300
+    height: 100
+  input: {fileID: 0}
+  output: {fileID: 114168602506223492}
+  file: {fileID: 8300000, guid: 9a10debaf8483ae49aa91211098634f1, type: 3}
+  volumeOffset: 0
+  pitchOffset: 0
+--- !u!114 &114869063994512148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a81b464ba9745e44be8820ad1c8cfd6, type: 3}
+  m_Name: Debug MessageInput
+  m_EditorClassIdentifier: 
+  Window:
+    serializedVersion: 2
+    x: 9643
+    y: 10049
+    width: 20
+    height: 20
+  parentNode: {fileID: 114468650094220526}
+  connectedNodes:
+  - {fileID: 114168602506223492}
+  forceSingleConnection: 0
